@@ -1,0 +1,54 @@
+#!/bin/bash
+
+
+REPO="slok/sloth"
+# https://github.com/slok/sloth/tree/main/deploy/kubernetes/helm
+
+RELEASES_JSON="$(curl -s -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/${REPO}/releases)"
+
+# todo check error
+
+RELEASE_NAMES="$(echo "$RELEASES_JSON" | jq -r '.[] | select(.name|test("^sloth-helm-chart.*$"))| .name')"
+
+# todo check error
+
+function version { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
+
+# get latest release
+latest=""
+for candidate in $RELEASE_NAMES
+do
+  semver="$(echo $candidate | cut -d "-" -f4)"
+
+  if [ "$latest" == "" ] || [ $(version $semver) -gt $(version ""$latest) ]
+  then
+    latest=$semver
+  fi
+done
+
+echo "Latest is $latest"
+
+# Get latest release
+RELEASE="$(echo "$RELEASES_JSON" | jq --arg latest "sloth-helm-chart-$latest" '.[] | select(.name == $latest)')"
+
+URL="$(echo "$RELEASE" | jq -r '.tarball_url')"
+
+# todo check error
+
+# download tarball
+DIR="$(mktemp -d)"
+wget -qO ${DIR}/sloth-helm-chart.tar.gz "$URL"
+
+# todo check error
+
+# extract helm chart from tar
+file=${DIR}/sloth-helm-chart.tar.gz
+rootdir="$(tar -tf $file | head -n1)"
+
+tar -C $DIR -xf $file "${rootdir}deploy/kubernetes/"
+
+echo "Your stuff is in $DIR"
+
+rm -rf helm/sloth
+cp -R "${DIR}/${rootdir}deploy/kubernetes/helm/sloth/" helm/
+

@@ -1,0 +1,19 @@
+version: 2.1
+
+orbs:
+  architect: giantswarm/architect@4.24.0
+
+workflows:
+  build:
+    jobs:
+      # Ensure that for every commit to master and for every
+      # release tag, there is an app version in the catalog.
+      - architect/push-to-app-catalog:
+          context: architect
+          name: push-to-control-plane-catalog-master
+          app_catalog: "control-plane-catalog"
+          app_catalog_test: "control-plane-test-catalog"
+          chart: "sloth"
+          filters:
+            tags:
+              only: /^v.*/

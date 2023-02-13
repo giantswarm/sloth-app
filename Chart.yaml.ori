@@ -1,0 +1,10 @@
+apiVersion: v1
+appVersion: 0.21.0
+description: A Helm chart to run Descheduler
+home: https://github.com/giantswarm/sloth-app
+name: sloth-app
+version: [[ .Version ]]
+restrictions:
+  clusterSingleton: true
+  fixedNamespace: kube-system
+  gpuInstances: false

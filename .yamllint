@@ -1,5 +1,0 @@
-rules:
-  comments:
-    level: warning
-  comments-indentation:
-    level: warning

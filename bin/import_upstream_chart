@@ -52,3 +52,4 @@ echo "Your stuff is in $DIR"
 rm -rf helm/sloth
 cp -R "${DIR}/${rootdir}deploy/kubernetes/helm/sloth/" helm/
 
+sed -i "s/$latest/[[ .Version ]]/" helm/sloth/Chart.yaml

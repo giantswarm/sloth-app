@@ -7,6 +7,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [0.11.0-gs2] - 2023-02-20
+
 ### Added
 
 - Add modified grafana dashboards.
@@ -17,5 +19,6 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs1...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs2...HEAD
+[0.11.0-gs2]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs1...v0.11.0-gs2
 [0.11.0-gs1]: https://github.com/giantswarm/sloth-app/compare/v0.0.0...v0.11.0-gs1

@@ -7,8 +7,11 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [0.11.0-gs1] - 2023-02-20
+
 ### Added
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/azure-cloud-node-manager-app/compare/v0.0.0...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs1...HEAD
+[0.11.0-gs1]: https://github.com/giantswarm/sloth-app/compare/v0.0.0...v0.11.0-gs1

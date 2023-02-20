@@ -782,7 +782,7 @@ data:
               "exemplar": true,
               "expr": "slo:current_burn_rate:ratio{cluster_id=\"${cluster_id}\"}",
               "interval": "",
-              "legendFormat": "{{sloth_service}}/{{sloth_slo}}",
+              "legendFormat": "{{ "{{" }}sloth_service{{ "}}" }}/{{ "{{" }}sloth_slo{{ "}}" }}",
               "queryType": "randomWalk",
               "range": true,
               "refId": "A"
@@ -861,7 +861,7 @@ data:
               "format": "time_series",
               "instant": true,
               "interval": "",
-              "legendFormat": "{{sloth_id}}",
+              "legendFormat": "{{ "{{" }}sloth_id{{ "}}" }}",
               "queryType": "randomWalk",
               "refId": "A"
             }

@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Added
+
+- Add modified grafana dashboards.
+
 ## [0.11.0-gs1] - 2023-02-20
 
 ### Added

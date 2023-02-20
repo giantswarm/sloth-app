@@ -20,7 +20,7 @@ for candidate in $RELEASE_NAMES
 do
   semver="$(echo $candidate | cut -d "-" -f4)"
 
-  if [ "$latest" == "" ] || [ $(version $semver) -gt $(version ""$latest) ]
+  if [ "$latest" == "" ] || [ $(version "$semver") -gt $(version "$latest") ]
   then
     latest=$semver
   fi
@@ -51,5 +51,9 @@ echo "Your stuff is in $DIR"
 
 rm -rf helm/sloth
 cp -R "${DIR}/${rootdir}deploy/kubernetes/helm/sloth/" helm/
+
+# copy customizations
+
+cp -r customizations/* helm/sloth/
 
 sed -i "s/$latest/[[ .Version ]]/" helm/sloth/Chart.yaml

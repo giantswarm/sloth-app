@@ -9,6 +9,6 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ### Added
 
-- Initial commit with upstream release v0.21.0.
+- Initial commit with upstream release v0.11.0.
 
 [Unreleased]: https://github.com/giantswarm/azure-cloud-node-manager-app/compare/v0.0.0...HEAD

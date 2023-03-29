@@ -1,7 +1,7 @@
 labels: {}
 
 image:
-  repository: ghcr.io/slok/sloth
+  repository: docker.io/giantswarm/sloth
   tag: v0.11.0
 
 # -- Container resources: requests and limits for CPU, Memory

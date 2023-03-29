@@ -7,6 +7,15 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Updated image registry and repository
+
+### Added
+
+- Automatically generated base files
+- Values schema
+
 ## [0.11.0-gs2] - 2023-02-20
 
 ### Added

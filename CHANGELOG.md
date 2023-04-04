@@ -10,7 +10,7 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 ### Changed
 
 - Updated image registry and repository
-- changed chart-name to sloth-app
+- Improved readme
 
 ### Added
 

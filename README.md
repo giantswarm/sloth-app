@@ -18,7 +18,7 @@ For more detailed information concerning the Sloth SLOs dashboard, check the [of
 
 ## Rule management
 
-Sloth allow the creation of PrometheusRules CR as well as plain prometheus rules and can run as an operator in a Kubernetes cluster (for the PrometheusRules CR). It also provides a CLI tool for plain prometheus rules.
+Sloth allow to create PrometheusRules CR as well as plain prometheus rules and can run as an operator in a Kubernetes cluster (for the PrometheusRules CR). It also provides a CLI tool for plain prometheus rules.
 
 ### Rule configuration
 
@@ -37,11 +37,11 @@ metadata:
 spec:
   service: "controller-manager"
   labels:
-    owner: "phoenix"
+    component: "controller-manager"
   slos:
     - name: "latency"
       objective: 99
-      description: Reconciliation time for each resource controller by controller manager
+      description: Reconciliation time for each resource controlled by controller manager
       sli:
         events:
           errorQuery: |-
@@ -63,7 +63,7 @@ spec:
         ticketAlert:
           labels:
             severity: "slack"
-            slack_channel: "#team-phoenix"
+            slack_channel: "#responsible-team"
 ```
 
 ## Update to the latest version

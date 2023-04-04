@@ -10,11 +10,15 @@ Sloth generates understandable, uniform and reliable Prometheus SLOs for any kin
 
 Sloth-app provides a Grafana dashboard allowing simple and quick visualization of the SLOs defined. Those dashboards are defined in the `customizations/templates` folder.
 
-For more detailed information concerning the Sloth SLOs dashboard, check the [official documentatation](https://sloth.dev/introduction/dashboards/)
+For more detailed information concerning the Sloth SLOs dashboard, check the [official documentation](https://sloth.dev/introduction/dashboards/)
 
 ### Example
 
-#TODO : Add image of working SLO dashboard.
+Part of a `Sloth SLO dasboard` :
+![sloth slo dashboard](assets/sloth-dashboard.png)
+
+Part of a `Sloth SLO Overview dashboard` :
+![sloth slo overview dasboard](assets/sloth-dasboard-overview.png)
 
 ## Rule management
 

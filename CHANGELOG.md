@@ -10,6 +10,7 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 ### Changed
 
 - Updated image registry and repository
+- Improved readme
 
 ### Added
 

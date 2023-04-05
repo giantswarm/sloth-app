@@ -7,6 +7,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [1.0.0] - 2023-04-04
+
 ### Changed
 
 - Updated image registry and repository
@@ -29,6 +31,7 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs2...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs2...v1.0.0
 [0.11.0-gs2]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs1...v0.11.0-gs2
 [0.11.0-gs1]: https://github.com/giantswarm/sloth-app/compare/v0.0.0...v0.11.0-gs1

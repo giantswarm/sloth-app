@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Updated circleci jobs to push to the `monitoring` namespace in each collection
+
 ## [1.1.0] - 2023-04-11
 
 ### Added

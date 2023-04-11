@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Added
+
+- Circleci jobs to add sloth to app collections
+
 ## [1.0.0] - 2023-04-04
 
 ### Changed

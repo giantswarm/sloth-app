@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Added
+
+- Add team label.
+
 ### Removed
 
 - Stop pushing to `openstack-app-collection`.

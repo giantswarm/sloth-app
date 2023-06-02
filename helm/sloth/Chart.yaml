@@ -5,3 +5,5 @@ type: application
 home: https://github.com/slok/sloth
 kubeVersion: ">= 1.19.0-0"
 version: [[ .Version ]]
+annotations:
+  application.giantswarm.io/team: "atlas"

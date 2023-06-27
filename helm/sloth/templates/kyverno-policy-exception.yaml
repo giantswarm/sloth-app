@@ -1,0 +1,41 @@
+{{- if .Values.kyvernoPolicyExceptions.enabled }}
+{{- if .Capabilities.APIVersions.Has "kyverno.io/v2alpha1/PolicyException" -}}
+apiVersion: kyverno.io/v2alpha1
+kind: PolicyException
+metadata:
+  annotations:
+    "helm.sh/hook": "pre-install,pre-upgrade"
+  labels:
+    {{- include "sloth.labels" . | nindent 4 }}
+  name: {{ include "sloth.fullname" . }}
+  namespace: {{ .Values.kyvernoPolicyExceptions.namespace | default .Release.Namespace }}
+spec:
+  exceptions:
+  - policyName: disallow-capabilities-strict
+    ruleNames:
+    - require-drop-all
+    - autogen-require-drop-all
+  - policyName: disallow-privilege-escalation
+    ruleNames:
+    - privilege-escalation
+    - autogen-privilege-escalation
+  - policyName: require-run-as-nonroot
+    ruleNames:
+    - run-as-non-root
+    - autogen-run-as-non-root
+  - policyName: restrict-seccomp-strict
+    ruleNames:
+    - check-seccomp-strict
+    - autogen-check-seccomp-strict
+  match:
+    any:
+    - resources:
+        kinds:
+        - Deployment
+        - Pod
+        namespaces:
+        - {{ .Release.Namespace }}
+        names:
+        - {{ include "sloth.fullname" . }}*
+  {{- end -}}
+{{- end -}}

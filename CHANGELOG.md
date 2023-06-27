@@ -7,6 +7,14 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Added
+
+- Add Kyverno Policy Exceptions.
+
+### Changed
+
+- Change image registries to support mirroring.
+
 ## [1.1.3] - 2023-06-02
 
 ### Added

@@ -70,15 +70,15 @@ customSloConfig:
 #     effect: NoSchedule
 
 securityContext:
-  pod: null
-  #   fsGroup: 100
-  #   runAsGroup: 1000
-  #   runAsNonRoot: true
-  #   runAsUser: 100
-  container: null
-  #   allowPrivilegeEscalation: false
-
-# Enable Kyverno PolicyException
-kyvernoPolicyExceptions:
-  enabled: true
-  namespace: giantswarm
+  pod:
+    runAsNonRoot: true
+    runAsUser: 65534
+    seccompProfile:
+      type: RuntimeDefault
+  container:
+    allowPrivilegeEscalation: false
+    seccompProfile:
+      type: RuntimeDefault
+    capabilities:
+      drop:
+        - ALL

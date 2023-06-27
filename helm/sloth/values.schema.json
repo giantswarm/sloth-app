@@ -49,6 +49,9 @@
                 "image": {
                     "type": "object",
                     "properties": {
+                        "registry": {
+                            "type": "string"
+                        },
                         "repository": {
                             "type": "string"
                         },
@@ -76,6 +79,9 @@
         "image": {
             "type": "object",
             "properties": {
+                "registry": {
+                    "type": "string"
+                },
                 "repository": {
                     "type": "string"
                 },
@@ -86,6 +92,17 @@
         },
         "imagePullSecrets": {
             "type": "array"
+        },
+        "kyvernoPolicyExceptions": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "namespace": {
+                    "type": "string"
+                }
+            }
         },
         "labels": {
             "type": "object"

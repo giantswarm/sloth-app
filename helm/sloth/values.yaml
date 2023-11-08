@@ -36,7 +36,7 @@ commonPlugins:
   image:
     registry: docker.io
     repository: giantswarm/git-sync
-    tag: v3.6.8
+    tag: v3.6.9
   gitRepo:
     url: https://github.com/slok/sloth-common-sli-plugins
     branch: main

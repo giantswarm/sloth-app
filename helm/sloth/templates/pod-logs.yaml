@@ -1,0 +1,27 @@
+apiVersion: monitoring.grafana.com/v1alpha2
+kind: PodLogs
+metadata:
+  name: {{ include "sloth.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "sloth.labels" . | nindent 4 }}
+    {{- with .Values.metrics.prometheusLabels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "sloth.selectorLabels" . | nindent 6 }}
+  relabelings:
+    - action: replace                                                                                                                                                                                                                                                                     
+      regex: ;(.*)                                                                                                                                                                                                                                                                        
+      replacement: $1                                                                                                                                                                                                                                                                     
+      separator: ;                                                                                                                                                                                                                                                                        
+      sourceLabels:                                                                                                                                                                                                                                                                       
+      - namespace                                                                                                                                                                                                                                                                         
+      - __meta_kubernetes_namespace                                                                                                                                                                                                                                                       
+      targetLabel: namespace                                                                                                                                                                                                                                                              
+    - action: replace                                                                                                                                                                                                                                                                     
+      sourceLabels:                                                                                                                                                                                                                                                                       
+      - __meta_kubernetes_pod_label_app_kubernetes_io_name                                                                                                                                                                                                                                
+      targetLabel: app

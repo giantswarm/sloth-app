@@ -7,6 +7,34 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [1.2.1] - 2023-06-27
+
+### Fixed
+
+- Fix security concerns.
+
+## [1.2.0] - 2023-06-27
+
+### Added
+
+- Add Kyverno Policy Exceptions.
+
+### Changed
+
+- Change image registries to support mirroring.
+
+## [1.1.3] - 2023-06-02
+
+### Added
+
+- Add team label.
+
+### Removed
+
+- Stop pushing to `openstack-app-collection`.
+
+## [1.1.2] - 2023-04-13
+
 ## [1.1.1] - 2023-04-11
 
 ### Changed
@@ -43,7 +71,11 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/giantswarm/sloth-app/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/giantswarm/sloth-app/compare/v1.1.3...v1.2.0
+[1.1.3]: https://github.com/giantswarm/sloth-app/compare/v1.1.2...v1.1.3
+[1.1.2]: https://github.com/giantswarm/sloth-app/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/giantswarm/sloth-app/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/giantswarm/sloth-app/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/giantswarm/sloth-app/compare/v0.11.0-gs2...v1.0.0

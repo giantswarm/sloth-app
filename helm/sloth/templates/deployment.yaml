@@ -1,5 +1,3 @@
-
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,7 +27,7 @@ spec:
       {{- end }}
       containers:
         - name: sloth
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
           args:
             - kubernetes-controller
             {{- if .Values.sloth.resyncInterval }}
@@ -92,7 +90,7 @@ spec:
           {{- end }}
         {{- if .Values.commonPlugins.enabled }}
         - name: git-sync-plugins
-          image: {{ .Values.commonPlugins.image.repository }}:{{ .Values.commonPlugins.image.tag }}
+          image: {{ .Values.commonPlugins.image.registry }}/{{ .Values.commonPlugins.image.repository }}:{{ .Values.commonPlugins.image.tag }}
           args:
             - --repo={{.Values.commonPlugins.gitRepo.url}}
             - --branch={{.Values.commonPlugins.gitRepo.branch}}
@@ -126,4 +124,3 @@ spec:
             name: {{ include "sloth.fullname" . }}
       {{- end }}
       {{- end }}
-

@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/sloth-app/tree/main.svg?style=svg)](https://circleci.com/gh/giantswarm/sloth-app/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/sloth-app/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/sloth-app/tree/main)
 
 # Sloth APP
 

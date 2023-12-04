@@ -13,6 +13,12 @@ spec:
   selector:
     matchLabels:
       {{- include "sloth.selectorLabels" . | nindent 6 }}
+  pipelineStages:
+    - docker: {}
+    - cri: {}
+    - match:
+        selector: '{job="monitoring/sloth"}'
+        action: drop
   relabelings:
     - action: replace                                                                                                                                                                                                                                                                     
       regex: ;(.*)                                                                                                                                                                                                                                                                        

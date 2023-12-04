@@ -1,4 +1,4 @@
-apiVersion: monitoring.grafana.com/v1alpha2
+apiVersion: monitoring.grafana.com/v1alpha1
 kind: PodLogs
 metadata:
   name: {{ include "sloth.fullname" . }}
@@ -9,6 +9,7 @@ metadata:
     {{- toYaml . | nindent 4 }}
     {{- end }}
 spec:
+  jobLabel: "slothslos"
   selector:
     matchLabels:
       {{- include "sloth.selectorLabels" . | nindent 6 }}

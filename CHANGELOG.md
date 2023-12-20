@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Configure `gsoci.azurecr.io` as the default container image registry.
+
 ## [1.2.1] - 2023-06-27
 
 ### Fixed
@@ -58,12 +62,6 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Automatically generated base files
 - Values schema
-
-## [0.11.0-gs2] - 2023-02-20
-
-### Added
-
-- Add modified grafana dashboards.
 
 ## [0.11.0-gs1] - 2023-02-20
 

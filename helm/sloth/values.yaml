@@ -1,7 +1,7 @@
 labels: {}
 
 image:
-  registry: docker.io
+  registry: gsoci.azurecr.io
   repository: giantswarm/sloth
   tag: v0.11.0
 
@@ -34,7 +34,7 @@ sloth:
 commonPlugins:
   enabled: true
   image:
-    registry: docker.io
+    registry: gsoci.azurecr.io
     repository: giantswarm/git-sync
     tag: v4.1.0
   gitRepo:

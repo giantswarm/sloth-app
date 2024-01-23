@@ -5,6 +5,9 @@ image:
   repository: giantswarm/sloth
   tag: v0.11.0
 
+ciliumNetworkPolicy:
+  enabled: true
+
 # -- Container resources: requests and limits for CPU, Memory
 resources:
   limits:

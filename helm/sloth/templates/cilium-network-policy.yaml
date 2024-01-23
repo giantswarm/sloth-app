@@ -1,0 +1,16 @@
+{{- if .Values.ciliumNetworkPolicy.enabled -}}
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  labels:
+    {{- include "sloth.labels" . | nindent 4 }}
+  name: {{ include "sloth.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  endpointSelector:
+    matchLabels:
+      {{- include "sloth.selectorLabels" . | nindent 6 }}
+  egress:
+    - toEntities:
+        - kube-apiserver
+{{- end -}}

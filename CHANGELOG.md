@@ -7,6 +7,14 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix issues related to git-sync since upgrade to [4.x.x](https://github.com/kubernetes/git-sync/releases/tag/v4.0.0).
+
+### Changed
+
+- Configure gsoci.azurecr.io as the default container image registry.
+
 ## [1.3.0] - 2024-01-23
 
 ### Added

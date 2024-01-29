@@ -19,7 +19,7 @@
                 "gitRepo": {
                     "type": "object",
                     "properties": {
-                        "branch": {
+                        "ref": {
                             "type": "string"
                         },
                         "resources": {

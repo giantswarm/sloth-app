@@ -7,6 +7,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [1.4.0] - 2024-01-29
+
 ### Fixed
 
 - Fix issues related to git-sync since upgrade to [4.x.x](https://github.com/kubernetes/git-sync/releases/tag/v4.0.0).
@@ -85,7 +87,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/giantswarm/sloth-app/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/giantswarm/sloth-app/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/giantswarm/sloth-app/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/giantswarm/sloth-app/compare/v1.1.3...v1.2.0

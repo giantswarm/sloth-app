@@ -7,6 +7,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [1.4.1] - 2024-01-31
+
 ### Changed
 
 - Rename Sloth dashboards to align with the new SLA reporting dashboard.
@@ -91,7 +93,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.4.0...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.4.1...HEAD
+[1.4.1]: https://github.com/giantswarm/sloth-app/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/giantswarm/sloth-app/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/giantswarm/sloth-app/compare/v1.2.1...v1.3.0
 [1.2.1]: https://github.com/giantswarm/sloth-app/compare/v1.2.0...v1.2.1

@@ -875,7 +875,9 @@ data:
       "schemaVersion": 37,
       "style": "dark",
       "tags": [
-        "team:phoenix"
+        "owner:atlas",
+        "topic:slo",
+        "component:sloth"
       ],
       "templating": {
         "list": [
@@ -931,8 +933,8 @@ data:
       },
       "timepicker": {},
       "timezone": "",
-      "title": "Sloth SLO Overview",
-      "uid": "high-level-sloth-slos",
+      "title": "SLOs / Sloth Overview",
+      "uid": "slo-overview",
       "version": 3,
       "weekStart": ""
     }

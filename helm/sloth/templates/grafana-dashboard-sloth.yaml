@@ -1358,7 +1358,9 @@ data:
       "schemaVersion": 37,
       "style": "dark",
       "tags": [
-        "team:phoenix"
+        "owner:atlas",
+        "topic:slo",
+        "component:sloth"
       ],
       "templating": {
         "list": [

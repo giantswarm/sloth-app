@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix dashboard tags.
+
 ## [1.4.1] - 2024-01-31
 
 ### Changed

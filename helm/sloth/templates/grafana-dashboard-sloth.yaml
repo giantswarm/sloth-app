@@ -1537,7 +1537,7 @@ data:
       },
       "timepicker": {},
       "timezone": "",
-      "title": "Sloth SLO",
+      "title": "SLOs / Sloth",
       "uid": "slo-detail",
       "version": 14,
       "weekStart": ""

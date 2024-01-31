@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Rename Sloth dashboards to align with the new SLA reporting dashboard.
+
 ## [1.4.0] - 2024-01-29
 
 ### Fixed

@@ -931,8 +931,8 @@ data:
       },
       "timepicker": {},
       "timezone": "",
-      "title": "Sloth SLO Overview",
-      "uid": "high-level-sloth-slos",
+      "title": "SLOs / Sloth Overview",
+      "uid": "slo-overview",
       "version": 3,
       "weekStart": ""
     }

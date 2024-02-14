@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix Cilium Network Policies onprem.
+
 ## [1.4.2] - 2024-01-31
 
 ### Fixed

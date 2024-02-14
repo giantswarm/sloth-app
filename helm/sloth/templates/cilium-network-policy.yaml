@@ -13,4 +13,17 @@ spec:
   egress:
     - toEntities:
         - kube-apiserver
+        ## Needed by the init container to be able ot download sloth plugins.
+        - world
+  ingress:
+    - fromEntities:
+      - cluster
+      toPorts:
+      - ports:
+        - port: "8081"
+          protocol: "TCP"
+        rules:
+          http:
+          - method: "GET"
+            path: "/metrics"
 {{- end -}}

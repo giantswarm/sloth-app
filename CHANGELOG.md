@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix CNP to be able to access DNS.
+
 ## [1.4.3] - 2024-02-14
 
 ### Fixed

@@ -47,7 +47,7 @@ data:
           "collapsed": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "gridPos": {
             "h": 1,
@@ -61,7 +61,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "refId": "A"
             }
@@ -72,7 +72,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "The SLOs that currently are burning more error budget that then available",
           "fieldConfig": {
@@ -175,7 +175,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -236,7 +236,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "The burning rate of the all the Service SLOs",
           "fieldConfig": {
@@ -343,7 +343,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -362,7 +362,7 @@ data:
           "collapsed": false,
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "gridPos": {
             "h": 1,
@@ -378,7 +378,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "refId": "A"
             }
@@ -389,7 +389,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "fieldConfig": {
             "defaults": {
@@ -439,7 +439,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "exemplar": false,
               "expr": "slo:objective:ratio{sloth_service=\"${service}\", sloth_slo=\"${slo}\"}",
@@ -456,7 +456,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "fieldConfig": {
             "defaults": {
@@ -573,7 +573,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -587,7 +587,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -606,7 +606,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "",
           "fieldConfig": {
@@ -657,7 +657,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "exemplar": false,
               "expr": "sloth_slo_info{sloth_service=\"${service}\", sloth_slo=\"${slo}\"}",
@@ -673,7 +673,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "This moment burning % of the budget.",
           "fieldConfig": {
@@ -732,7 +732,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -749,7 +749,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "This month remaining error budget, starts the 1st of the month and ends  28th-31st (not rolling window)",
           "fieldConfig": {
@@ -808,7 +808,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -825,7 +825,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "A rolling window of the total period (30d) error budget remaining.",
           "fieldConfig": {
@@ -884,7 +884,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -901,7 +901,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "This graph shows the month error budget burn down chart (starts the 1st until the end of the month)",
           "fieldConfig": {
@@ -1024,7 +1024,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -1039,7 +1039,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "exemplar": true,
               "expr": "1 - sum_over_time(\n  (\n    (1 / (days_in_month() * 24)) *\n    (month() == bool vector(${__to:date:M}))\n  )[32d:1h]\n)",
@@ -1067,7 +1067,7 @@ data:
           "dataFormat": "timeseries",
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "description": "",
           "fieldConfig": {
@@ -1142,7 +1142,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": true,
@@ -1176,7 +1176,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "fieldConfig": {
             "defaults": {
@@ -1249,7 +1249,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1266,7 +1266,7 @@ data:
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "PBFA97CFB590B2093"
+            "uid": "$datasource"
           },
           "fieldConfig": {
             "defaults": {
@@ -1339,7 +1339,7 @@ data:
             {
               "datasource": {
                 "type": "prometheus",
-                "uid": "PBFA97CFB590B2093"
+                "uid": "$datasource"
               },
               "editorMode": "code",
               "exemplar": false,
@@ -1366,13 +1366,31 @@ data:
         "list": [
           {
             "current": {
+              "selected": false,
+              "text": "default",
+              "value": "default"
+            },
+            "hide": 0,
+            "includeAll": false,
+            "label": "Data source",
+            "multi": false,
+            "name": "datasource",
+            "options": [],
+            "query": "prometheus",
+            "refresh": 1,
+            "regex": "",
+            "skipUrlSync": false,
+            "type": "datasource"
+          },
+          {
+            "current": {
               "selected": true,
               "text": "gaia",
               "value": "gaia"
             },
             "datasource": {
               "type": "prometheus",
-              "uid": "PBFA97CFB590B2093"
+              "uid": "$datasource"
             },
             "definition": "label_values(apiserver_request_total, cluster_id)",
             "hide": 0,
@@ -1399,7 +1417,7 @@ data:
             },
             "datasource": {
               "type": "prometheus",
-              "uid": "PBFA97CFB590B2093"
+              "uid": "$datasource"
             },
             "definition": "label_values(slo:objective:ratio, sloth_service)",
             "hide": 0,
@@ -1428,7 +1446,7 @@ data:
             },
             "datasource": {
               "type": "prometheus",
-              "uid": "PBFA97CFB590B2093"
+              "uid": "$datasource"
             },
             "definition": "label_values(slo:objective:ratio{sloth_service=\"${service}\"}, sloth_slo)",
             "hide": 0,

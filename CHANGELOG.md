@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Add datasource selector to sloth dashboards.
+
 ## [1.4.4] - 2024-02-19
 
 ### Fixed

@@ -7,6 +7,11 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Added
+
+- Add helm chart templating test in ci pipeline.
+- Add tests with ats in ci pipeline.
+
 ## [1.4.5] - 2024-06-12
 
 ### Changed

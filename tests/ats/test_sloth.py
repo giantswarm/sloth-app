@@ -68,7 +68,6 @@ def wait_for_deployments(kube_cluster: Cluster) -> List[pykube.Deployment]:
 # this additional delay and retries
 # -- Checking that sloth pods are available
 @pytest.mark.smoke
-@pytest.mark.upgrade
 # @pytest.mark.flaky(reruns=5, reruns_delay=10)
 def test_sloth_creates_prometheus_rules(kube_cluster: Cluster, deployments: List[pykube.Deployment]):
     # loop over the list of deployments to make sure the pods are running

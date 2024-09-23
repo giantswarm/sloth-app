@@ -100,6 +100,9 @@ spec:
             - name: sloth-common-sli-plugins
               # Default path for git-sync.
               mountPath: /git
+            - name: tmp
+              # Default path for git files to be created.
+              mountPath: /tmp
           {{- with .Values.securityContext.container }}
           securityContext:
             {{- toYaml . | nindent 12 }}
@@ -109,10 +112,12 @@ spec:
         {{- end }}
       {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
-{{ include "sloth.imagePullSecrets" . | trim | indent 8 }}
+        {{ include "sloth.imagePullSecrets" . | trim | nindent 8 }}
       {{- end }}
       {{- if or .Values.commonPlugins.enabled .Values.customSloConfig.enabled }}
       volumes:
+        - name: tmp
+          emptyDir: {}
       {{- if .Values.commonPlugins.enabled }}
         - name: sloth-common-sli-plugins
           emptyDir: {}

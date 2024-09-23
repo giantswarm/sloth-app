@@ -1,9 +1,10 @@
 apiVersion: v2
 name: sloth
 description: Base chart for Sloth.
+icon: https://s.giantswarm.io/app-icons/sloth/1/light-icon.svg
 type: application
 home: https://github.com/slok/sloth
 kubeVersion: ">= 1.19.0-0"
-version: [[ .Version ]]
+version: 1.4.5
 annotations:
   application.giantswarm.io/team: "atlas"

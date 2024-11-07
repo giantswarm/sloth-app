@@ -2,7 +2,7 @@ module github.com/slok/sloth/helm
 
 go 1.22.0
 
-toolchain go1.23.2
+toolchain go1.23.3
 
 require (
 	github.com/slok/go-helm-template v0.7.0

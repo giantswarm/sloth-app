@@ -6,7 +6,7 @@ toolchain go1.23.3
 
 require (
 	github.com/slok/go-helm-template v0.7.0
-	github.com/stretchr/testify v1.9.0
+	github.com/stretchr/testify v1.10.0
 )
 
 require (

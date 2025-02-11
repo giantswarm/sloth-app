@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Update dashboards for observability-op provisioning.
+
 ### Added
 
 - Add helm chart templating test in ci pipeline.

@@ -3,7 +3,10 @@ kind: ConfigMap
 metadata:
   annotations:
     ## Define the directory in grafana where the dashboard will be added to the grafana container
+    # TODO: remove this label when deprecate vintage installations
     k8s-sidecar-target-directory: /var/lib/grafana/dashboards/private/shared
+    ## Load dashboard in "Shared Org" grafana organization
+    observability.giantswarm.io/organization: "Shared Org"
   labels:
     {{- include "sloth.labels" . | nindent 4 }}
     app.giantswarm.io/kind: dashboard

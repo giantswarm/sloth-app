@@ -5,6 +5,6 @@ icon: https://s.giantswarm.io/app-icons/sloth/1/light-icon.svg
 type: application
 home: https://github.com/slok/sloth
 kubeVersion: ">= 1.19.0-0"
-version: 1.4.5
+version: 1.5.0
 annotations:
   application.giantswarm.io/team: "atlas"

@@ -17,19 +17,23 @@ jobs:
 workflows:
   build:
     jobs:
+    # Ensure that for every commit to main and for every
+    # release tag triggers the build
     - template-chart:
         name: template-chart-test
         filters:
+          tags:
+            only: /^v.*/
           branches:
             ignore:
             - main
 
-      # Ensure that for every commit to master and for every
-      # release tag, there is an app version in the catalog.
     - architect/push-to-app-catalog:
         context: architect
         executor: app-build-suite
         name: package-and-push-chart
+        requires:
+        - template-chart-test
         app_catalog: control-plane-catalog
         app_catalog_test: control-plane-test-catalog
         chart: sloth
@@ -46,6 +50,8 @@ workflows:
         requires:
         - package-and-push-chart
         filters:
+          tags:
+            only: /^v.*/
           branches:
             ignore:
             - main
@@ -58,7 +64,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: aws-app-collection
         requires:
-        - package-and-push-chart
+        - run-tests-with-ats
         filters:
           branches:
             ignore: /.*/
@@ -73,7 +79,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: vsphere-app-collection
         requires:
-        - package-and-push-chart
+        - run-tests-with-ats
         filters:
           branches:
             ignore: /.*/
@@ -88,7 +94,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: cloud-director-app-collection
         requires:
-        - package-and-push-chart
+        - run-tests-with-ats
         filters:
           branches:
             ignore: /.*/
@@ -103,7 +109,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: capa-app-collection
         requires:
-        - package-and-push-chart
+        - run-tests-with-ats
         filters:
           branches:
             ignore: /.*/
@@ -118,7 +124,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: capz-app-collection
         requires:
-        - package-and-push-chart
+        - run-tests-with-ats
         filters:
           branches:
             ignore: /.*/
@@ -133,7 +139,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: proxmox-app-collection
         requires:
-        - package-and-push-chart
+        - run-tests-with-ats
         filters:
           branches:
             ignore: /.*/

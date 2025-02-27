@@ -17,19 +17,23 @@ jobs:
 workflows:
   build:
     jobs:
+    # Ensure that for every commit to main and for every
+    # release tag triggers the build
     - template-chart:
         name: template-chart-test
         filters:
+          tags:
+            only: /^v.*/
           branches:
             ignore:
             - main
 
-      # Ensure that for every commit to master and for every
-      # release tag, there is an app version in the catalog.
     - architect/push-to-app-catalog:
         context: architect
         executor: app-build-suite
         name: package-and-push-chart
+        requires:
+        - template-chart-test
         app_catalog: control-plane-catalog
         app_catalog_test: control-plane-test-catalog
         chart: sloth
@@ -37,26 +41,27 @@ workflows:
         filters:
           tags:
             only: /^v.*/
-
           branches:
             ignore:
             - main
-            - master
+
     - architect/run-tests-with-ats:
         name: run-tests-with-ats
-          ## TODO Remove once new architect orb is released
+        ## TODO Remove once new architect orb is released
         app-test-suite_version: v0.8.0
         app-test-suite_container_tag: 0.8.0
         requires:
         - package-and-push-chart
         filters:
+          tags:
+            only: /^v.*/
           branches:
             ignore:
             - main
 
     - architect/push-to-app-collection:
-        name: aws-app-collection
         context: architect
+        name: push-to-aws-app-collection
         app_catalog: control-plane-catalog
         app_name: sloth
         app_namespace: monitoring
@@ -70,8 +75,8 @@ workflows:
             only: /^v.*/
 
     - architect/push-to-app-collection:
-        name: vsphere-app-collection
         context: architect
+        name: push-to-vsphere-app-collection
         app_catalog: control-plane-catalog
         app_name: sloth
         app_namespace: monitoring

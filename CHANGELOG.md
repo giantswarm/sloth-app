@@ -7,6 +7,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [1.6.0] - 2025-02-27
+
 ### Fixed
 
 - Fix Push to collection CI.
@@ -132,7 +134,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/giantswarm/sloth-app/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/giantswarm/sloth-app/compare/v1.4.5...v1.5.0
 [1.4.5]: https://github.com/giantswarm/sloth-app/compare/v1.4.4...v1.4.5
 [1.4.4]: https://github.com/giantswarm/sloth-app/compare/v1.4.3...v1.4.4

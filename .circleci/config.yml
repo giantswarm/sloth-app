@@ -37,16 +37,12 @@ workflows:
         filters:
           tags:
             only: /^v.*/
-
           branches:
             ignore:
             - main
-            - master
+
     - architect/run-tests-with-ats:
         name: run-tests-with-ats
-          ## TODO Remove once new architect orb is released
-        app-test-suite_version: v0.8.0
-        app-test-suite_container_tag: 0.8.0
         requires:
         - package-and-push-chart
         filters:
@@ -55,14 +51,14 @@ workflows:
             - main
 
     - architect/push-to-app-collection:
-        name: aws-app-collection
         context: architect
+        name: push-to-aws-app-collection
         app_catalog: control-plane-catalog
         app_name: sloth
         app_namespace: monitoring
         app_collection_repo: aws-app-collection
         requires:
-        - run-tests-with-ats
+        - package-and-push-chart
         filters:
           branches:
             ignore: /.*/
@@ -70,14 +66,14 @@ workflows:
             only: /^v.*/
 
     - architect/push-to-app-collection:
-        name: vsphere-app-collection
         context: architect
+        name: push-to-vsphere-app-collection
         app_catalog: control-plane-catalog
         app_name: sloth
         app_namespace: monitoring
         app_collection_repo: vsphere-app-collection
         requires:
-        - run-tests-with-ats
+        - package-and-push-chart
         filters:
           branches:
             ignore: /.*/
@@ -92,7 +88,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: cloud-director-app-collection
         requires:
-        - run-tests-with-ats
+        - package-and-push-chart
         filters:
           branches:
             ignore: /.*/
@@ -107,7 +103,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: capa-app-collection
         requires:
-        - run-tests-with-ats
+        - package-and-push-chart
         filters:
           branches:
             ignore: /.*/
@@ -122,7 +118,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: capz-app-collection
         requires:
-        - run-tests-with-ats
+        - package-and-push-chart
         filters:
           branches:
             ignore: /.*/
@@ -137,7 +133,7 @@ workflows:
         app_namespace: monitoring
         app_collection_repo: proxmox-app-collection
         requires:
-        - run-tests-with-ats
+        - package-and-push-chart
         filters:
           branches:
             ignore: /.*/

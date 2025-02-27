@@ -47,6 +47,9 @@ workflows:
 
     - architect/run-tests-with-ats:
         name: run-tests-with-ats
+        ## TODO Remove once new architect orb is released
+        app-test-suite_version: v0.8.0
+        app-test-suite_container_tag: 0.8.0
         requires:
         - package-and-push-chart
         filters:

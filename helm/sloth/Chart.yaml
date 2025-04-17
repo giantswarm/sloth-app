@@ -3,7 +3,9 @@ name: sloth
 description: Base chart for Sloth.
 icon: https://s.giantswarm.io/app-icons/sloth/1/light-icon.svg
 type: application
-home: https://github.com/slok/sloth
+home: https://github.com/giantswarm/sloth-app
+sources:
+ - https://github.com/slok/sloth
 kubeVersion: ">= 1.19.0-0"
 version: 1.7.0
 annotations:

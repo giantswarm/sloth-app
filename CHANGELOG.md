@@ -7,6 +7,12 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [1.7.1] - 2025-04-17
+
+### Fixed
+
+- Fix home URL in chart metadata
+
 ## [1.7.0] - 2025-03-31
 
 ### Changed
@@ -140,7 +146,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.7.0...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.7.1...HEAD
+[1.7.1]: https://github.com/giantswarm/sloth-app/compare/v1.7.0...v1.7.1
 [1.7.0]: https://github.com/giantswarm/sloth-app/compare/v1.6.0...v1.7.0
 [1.6.0]: https://github.com/giantswarm/sloth-app/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/giantswarm/sloth-app/compare/v1.4.5...v1.5.0

@@ -61,21 +61,6 @@ workflows:
 
     - architect/push-to-app-collection:
         context: architect
-        name: push-to-aws-app-collection
-        app_catalog: control-plane-catalog
-        app_name: sloth
-        app_namespace: monitoring
-        app_collection_repo: aws-app-collection
-        requires:
-        - run-tests-with-ats
-        filters:
-          branches:
-            ignore: /.*/
-          tags:
-            only: /^v.*/
-
-    - architect/push-to-app-collection:
-        context: architect
         name: push-to-vsphere-app-collection
         app_catalog: control-plane-catalog
         app_name: sloth

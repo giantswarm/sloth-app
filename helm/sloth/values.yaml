@@ -39,7 +39,7 @@ commonPlugins:
   image:
     registry: gsoci.azurecr.io
     repository: giantswarm/git-sync
-    tag: v4.4.2
+    tag: v4.4.3
   gitRepo:
     url: https://github.com/slok/sloth-common-sli-plugins
     ref: main

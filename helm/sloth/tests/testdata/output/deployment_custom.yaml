@@ -37,6 +37,9 @@ spec:
         runAsGroup: 1000
         runAsNonRoot: true
         runAsUser: 100
+      nodeSelector:
+        k1: v1
+        k2: v2
       containers:
         - name: sloth
           image: slok/sloth-test:v1.42.42
@@ -48,8 +51,7 @@ spec:
             - --label-selector=x=y,z!=y
             - --extra-labels=k1=v1
             - --extra-labels=k2=v2
-            - --sli-plugins-path=/plugins
-            - --disable-optimized-rules
+            - --plugins-path=/plugins
             - --logger=default
           ports:
             - containerPort: 8081
@@ -72,7 +74,7 @@ spec:
           args:
             - --repo=https://github.com/slok/sloth-test-common-sli-plugins
             - --branch=main
-            - --wait=30
+            - --period=30s
             - --webhook-url=http://localhost:8082/-/reload
           volumeMounts:
             - name: sloth-common-sli-plugins

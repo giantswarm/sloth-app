@@ -37,6 +37,9 @@ spec:
         runAsGroup: 1000
         runAsNonRoot: true
         runAsUser: 100
+      nodeSelector:
+        k1: v1
+        k2: v2
       containers:
         - name: sloth
           image: slok/sloth-test:v1.42.42
@@ -48,7 +51,6 @@ spec:
             - --label-selector=x=y,z!=y
             - --extra-labels=k1=v1
             - --extra-labels=k2=v2
-            - --disable-optimized-rules
             - --logger=default
           securityContext:
             allowPrivilegeEscalation: false

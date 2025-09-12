@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -25,6 +26,14 @@ spec:
       securityContext:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | trim | indent 8 }}
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | trim | indent 8 }}
+      {{- end }}
       containers:
         - name: sloth
           image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
@@ -46,13 +55,10 @@ spec:
             - --extra-labels={{ $key }}={{ $val }}
             {{- end}}
             {{- if .Values.commonPlugins.enabled }}
-            - --sli-plugins-path=/plugins
+            - --plugins-path=/plugins
             {{- end }}
             {{- with .Values.sloth.defaultSloPeriod }}
             - --default-slo-period={{ . }}
-            {{- end }}
-            {{- if not .Values.sloth.optimizedRules }}
-            - --disable-optimized-rules
             {{- end }}
             {{- if .Values.customSloConfig.enabled }}
             - --slo-period-windows-path={{ .Values.customSloConfig.path }}
@@ -84,10 +90,6 @@ spec:
           {{- end }}
           resources:
           {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.tolerations }}
-          tolerations:
-{{ toYaml . | trim | indent 12 }}
-          {{- end }}
         {{- if .Values.commonPlugins.enabled }}
         - name: git-sync-plugins
           image: {{ .Values.commonPlugins.image.registry }}/{{ .Values.commonPlugins.image.repository }}:{{ .Values.commonPlugins.image.tag }}
@@ -112,7 +114,7 @@ spec:
         {{- end }}
       {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{ include "sloth.imagePullSecrets" . | trim | nindent 8 }}
+{{ include "sloth.imagePullSecrets" . | trim | indent 8 }}
       {{- end }}
       {{- if or .Values.commonPlugins.enabled .Values.customSloConfig.enabled }}
       volumes:

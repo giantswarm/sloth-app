@@ -3,7 +3,7 @@ labels: {}
 image:
   registry: gsoci.azurecr.io
   repository: giantswarm/sloth
-  tag: v0.12.0
+  tag: v0.13.0
 
 ciliumNetworkPolicy:
   enabled: true
@@ -28,7 +28,6 @@ sloth:
   namespace: ""         # The namespace where sloth will the CRs to process.
   extraLabels: {}       # Labels that will be added to all the generated SLO Rules.
   defaultSloPeriod: ""  # The slo period used by sloth (e.g. 30d).
-  optimizedRules: true  # Reduce prom load for calculating period window burnrates.
   debug:
     enabled: false
   # Could be: default or json

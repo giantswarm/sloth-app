@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade to sloth 0.14.0
+
 ## [1.8.0] - 2025-09-15
 
 ### Changed

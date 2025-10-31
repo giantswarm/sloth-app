@@ -3,7 +3,7 @@ labels: {}
 image:
   registry: gsoci.azurecr.io
   repository: giantswarm/sloth
-  tag: v0.14.0
+  tag: v0.15.0
 
 ciliumNetworkPolicy:
   enabled: true

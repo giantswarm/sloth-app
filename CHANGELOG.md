@@ -8,7 +8,7 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 ## [Unreleased]
 
 ### Changed
-
+- Build with up-to-date pipelines.
 - Upgrade to sloth 0.14.0
 
 ## [1.8.0] - 2025-09-15
@@ -143,12 +143,6 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Automatically generated base files
 - Values schema
-
-## [0.11.0-gs2] - 2023-02-20
-
-### Added
-
-- Add modified grafana dashboards.
 
 ## [0.11.0-gs1] - 2023-02-20
 

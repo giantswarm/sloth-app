@@ -7,6 +7,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+## [1.9.0] - 2026-02-02
+
 ### Changed
 
 - Upgrade to sloth 0.14.0
@@ -156,7 +158,8 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 - Initial commit with upstream release v0.11.0.
 
-[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.8.0...HEAD
+[Unreleased]: https://github.com/giantswarm/sloth-app/compare/v1.9.0...HEAD
+[1.9.0]: https://github.com/giantswarm/sloth-app/compare/v1.8.0...v1.9.0
 [1.8.0]: https://github.com/giantswarm/sloth-app/compare/v1.7.1...v1.8.0
 [1.7.1]: https://github.com/giantswarm/sloth-app/compare/v1.7.0...v1.7.1
 [1.7.0]: https://github.com/giantswarm/sloth-app/compare/v1.6.0...v1.7.0

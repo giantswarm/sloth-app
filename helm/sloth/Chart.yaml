@@ -8,6 +8,6 @@ home: https://github.com/giantswarm/sloth-app
 sources:
   - https://github.com/slok/sloth
 kubeVersion: ">= 1.19.0-0"
-version: 1.9.0
+version: 1.9.1
 annotations:
   io.giantswarm.application.team: "atlas"

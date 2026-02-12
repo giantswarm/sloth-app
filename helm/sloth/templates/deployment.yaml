@@ -36,7 +36,7 @@ spec:
       {{- end }}
       containers:
         - name: sloth
-          image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ default .Chart.AppVersion.Values.image.tag }}
+          image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
           args:
             - kubernetes-controller
             {{- if .Values.sloth.resyncInterval }}

@@ -38,6 +38,7 @@ workflows:
         app_catalog_test: control-plane-test-catalog
         chart: sloth
         persist_chart_archive: true
+        override_app_version: false
         filters:
           tags:
             only: /^v.*/

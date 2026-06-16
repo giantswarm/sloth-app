@@ -7,6 +7,10 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 
 ## [Unreleased]
 
+### Changed
+
+- Fix ABS config to not override AppVersion in Chart.yaml
+
 ## [1.9.1] - 2026-02-12
 
 ### Changed

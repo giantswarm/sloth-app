@@ -14,6 +14,7 @@ and this project's packages adheres to [Semantic Versioning](http://semver.org/s
 ### Changed
 
 - Fix ABS config to not override AppVersion in Chart.yaml
+- Update architect to v10.18.0 (giantswarm/sloth-app#340)
 
 ## [1.9.1] - 2026-02-12
 
